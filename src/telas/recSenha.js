@@ -1,10 +1,10 @@
-
-import { View, Text } from 'react-native'; 
-
-export default function RecSenha() {
-    return (
-        <View>
-            <Text>RecSenha</Text>
-        </View>
-    );
+import { View,Text } from "react-native";
+function recSenha() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Recuperção de senha</Text>
+    </View>
+  );
 }
+
+export default recSenha

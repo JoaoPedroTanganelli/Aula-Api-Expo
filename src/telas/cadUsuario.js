@@ -1,10 +1,10 @@
-
-import { View, Text } from 'react-native'; 
-
-export default function CadUsuario() {
-    return (
-        <View>
-            <Text>CadUsuario</Text>
-        </View>
-    );
+import { View,Text } from "react-native";
+function Cadusuario () {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Cadatro de usuario</Text>
+    </View>
+  );
 }
+
+export default Cadusuario
