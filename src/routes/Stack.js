@@ -1,19 +1,76 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import HomeScreen from '../telas/home'; 
-import Login from '../telas/login'; 
-import CadUsuario from '../telas/cadUsuario'; 
-import RecSenha from '../telas/recSenha';
+import LoginScreen from '../telas/login';
+import CadUsuarioScreen from '../telas/cadUsuario';
+import HomeScreen from '../telas/home';
+import RecSenhaScreen from '../telas/recSenha';
+import ItensScreen from '../telas/itens';
+import PerfilScreen from '../telas/perfil';
 
-const Stack = createNativeStackNavigator();
+const Navigator = createNativeStackNavigator();
 
-export default function RootStack() {
+function Stack() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="CadUsuario" component={CadUsuario} />
-      <Stack.Screen name="RecSenha" component={RecSenha} />
-    </Stack.Navigator>
+    <Navigator.Navigator
+      initialRouteName="Login"
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: 'tomato',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}
+    >
+
+      <Navigator.Screen
+        name="Login"
+        component={LoginScreen}
+        options={{ title: 'Login' }}
+      />
+
+      <Navigator.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{ title: 'Home' }}
+      />
+
+      <Navigator.Screen
+        name="Cadastro"
+        component={CadUsuarioScreen}
+        options={{ title: 'Cadastro de usuário' }}
+      />
+
+      <Navigator.Screen
+        name="RecSenha"
+        component={RecSenhaScreen}
+        options={{
+          title: 'Recuperação de senha',
+          headerStyle: {
+            backgroundColor: '#f4df1e',
+          },
+          headerTintColor: '#ff0000',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      />
+
+      <Navigator.Screen
+        name="Itens"
+        component={ItensScreen}
+        options={{ title: 'Itens' }}
+      />
+
+      <Navigator.Screen
+        name="Perfil"
+        component={PerfilScreen}
+        options={{ title: 'Perfil' }}
+      />
+
+    </Navigator.Navigator>
   );
 }
+
+export default Stack;

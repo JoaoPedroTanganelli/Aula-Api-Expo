@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 
-import RootStack from './src/routes/rootStack';
+import Stack from './src/routes/Stack';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <RootStack />
+      <Stack />
       <StatusBar style="auto" />
     </NavigationContainer>
   );
