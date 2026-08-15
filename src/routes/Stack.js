@@ -6,6 +6,7 @@ import HomeScreen from '../telas/home';
 import RecSenhaScreen from '../telas/recSenha';
 import ItensScreen from '../telas/itens';
 import PerfilScreen from '../telas/perfil';
+import TabNavigator from './TabNavigator';
 
 const Navigator = createNativeStackNavigator();
 
